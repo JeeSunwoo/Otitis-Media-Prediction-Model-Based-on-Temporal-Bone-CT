@@ -62,7 +62,9 @@ On top of the staged structure, we mapped one-to-one—as model components—the
 
 Prior to model design, we analyzed the train/val data distribution. Of the four items (Rt/Lt temporal, Rt/Lt otitis), only Rt (right) otitis media is markedly imbalanced.
 
-![Train/Val distribution analysis](assets/distribution_analysis.png)
+<img width="2160" height="2528" alt="architecture" src="https://github.com/user-attachments/assets/d1a43079-4d7a-42d9-8433-bd618e9adfff" />
+<img width="1624" height="410" alt="distribution_analysis" src="https://github.com/user-attachments/assets/5dc647d8-3606-453f-96d5-c739d187bc45" />
+
 
 *Figure 1. Train/Val distribution analysis of the CT slice dataset.*
 
@@ -139,7 +141,8 @@ Preprocessing was implemented in a single module so that training and inference 
 
 ## 6. Model Architecture and Operating Principles
 
-![Overall architecture](assets/architecture.png)
+<img width="2160" height="2528" alt="architecture" src="https://github.com/user-attachments/assets/e70c4e9c-ed02-49a0-a281-f653e2482551" />
+
 
 *Figure 2. Overall two-stage architecture: shared preprocessing → TemporalModel (temporal-span gate) → OtitisModel (left/right spatial comparison) → gated fusion → final per-slice prediction.*
 
@@ -208,7 +211,8 @@ On the official scoring based on exact row matching (No + R/L + Image number), o
 
 *Table 3. Official scoring result at the class (Normal/Otitis) level.*
 
-![Official scoring results](assets/results_scorecard.png)
+<img width="2160" height="1196" alt="results_scorecard" src="https://github.com/user-attachments/assets/b0967160-06f0-4e4e-8f81-1f13cc681775" />
+
 
 *Figure 3. Official scoring results: headline metrics (macro F1, final score, accuracy) and per-item macro F1.*
 
