@@ -41,7 +41,8 @@ Three design pillars:
 
 ## Architecture
 
-![Overall architecture](assets/architecture.png)
+<img width="2160" height="2528" alt="architecture" src="https://github.com/user-attachments/assets/c4558d6e-0ff3-4b0e-8f5d-338a6eb6436c" />
+
 
 *Two‑stage pipeline: shared preprocessing → **TemporalModel** (produces a temporal‑span **gate**) → **OtitisModel** (left/right spatial comparison) → **gated fusion** → per‑slice prediction. At inference, 5 folds are ensembled by logit averaging before sigmoid.*
 
@@ -51,7 +52,8 @@ Three design pillars:
 
 Before modeling, the train/val distribution was analyzed. Of the four items (Rt/Lt temporal, Rt/Lt otitis), **only Rt otitis is markedly imbalanced** — the central difficulty of the project and the motivation for the entire design.
 
-![Distribution analysis](assets/distribution_analysis.png)
+<img width="1624" height="410" alt="distribution_analysis" src="https://github.com/user-attachments/assets/ac4fae76-4d70-4f45-80b3-28f85cf34c7b" />
+
 
 *Left — slice‑level positive rate per item. Right — positive rate along the slice axis (1–132).*
 
@@ -149,7 +151,8 @@ Outputs are thresholded, **AND‑combined with the temporal gate**, then gap‑f
 
 ## Results
 
-![Per-item results scorecard](assets/results_scorecard.png)
+<img width="2160" height="1196" alt="results_scorecard" src="https://github.com/user-attachments/assets/fe5b5d1e-0b91-4440-a9c8-cc3fd478a2f9" />
+
 
 **Class-level breakdown** (all 3,320 slices viewed as Normal(0) / Otitis(1)):
 
